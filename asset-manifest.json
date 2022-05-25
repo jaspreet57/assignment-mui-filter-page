@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.ac8e378a.js",
-    "static/js/787.c8569223.chunk.js": "/static/js/787.c8569223.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.f6834a7382c5faaa8f7cc2b28dcfe718.svg",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.ac8e378a.js.map": "/static/js/main.ac8e378a.js.map",
-    "787.c8569223.chunk.js.map": "/static/js/787.c8569223.chunk.js.map"
+    "main.css": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/css/main.e6c13ad2.css",
+    "main.js": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/js/main.db8c8864.js",
+    "static/js/787.c8569223.chunk.js": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/js/787.c8569223.chunk.js",
+    "static/media/logo.svg": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/media/logo.f6834a7382c5faaa8f7cc2b28dcfe718.svg",
+    "index.html": "//www.jaspreet-singh.com/assignment-mui-filter-page/index.html",
+    "main.e6c13ad2.css.map": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/css/main.e6c13ad2.css.map",
+    "main.db8c8864.js.map": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/js/main.db8c8864.js.map",
+    "787.c8569223.chunk.js.map": "//www.jaspreet-singh.com/assignment-mui-filter-page/static/js/787.c8569223.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.ac8e378a.js"
+    "static/js/main.db8c8864.js"
   ]
 }
