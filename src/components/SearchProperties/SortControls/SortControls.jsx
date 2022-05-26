@@ -1,10 +1,11 @@
 import { Typography } from '@mui/material';
+import SortBy from './SortBy';
 import { SortContainer } from './SortControls.styles'
 
 function SortControls() {
     return (
         <SortContainer maxWidth={false}>
-            <Typography>Sorter</Typography>
+            <SortBy />
         </SortContainer>
     );
 }

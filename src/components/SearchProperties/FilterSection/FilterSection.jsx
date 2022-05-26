@@ -1,10 +1,12 @@
-import { Typography } from '@mui/material';
-import { FilterContainer } from './FilterSection.styles'
+import BhkType from './BhkType';
+import FurnishingType from './FurnishingType';
+import { FilterContainer } from './FilterSection.styles';
 
 function FilterSection() {
     return (
         <FilterContainer maxWidth={false}>
-            <Typography>Filters</Typography>
+                <BhkType />
+                <FurnishingType />
         </FilterContainer>
     );
 }
