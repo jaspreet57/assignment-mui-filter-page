@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import SortBy from './SortBy';
 import { SortContainer } from './SortControls.styles'
 

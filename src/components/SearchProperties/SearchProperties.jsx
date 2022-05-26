@@ -1,4 +1,4 @@
-import { Container, Divider, Typography, Grid } from '@mui/material';
+import { Container, Divider, Grid } from '@mui/material';
 import React from 'react';
 import FilterSection from './FilterSection/FilterSection';
 import PropertyCard from './PropertyCard/PropertyCard';

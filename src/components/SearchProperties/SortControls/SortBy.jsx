@@ -68,7 +68,7 @@ const SortBy = () => {
                     ))}
                 </Select>
             </FormControl>
-            {value != 'none' ? (
+            {value !== 'none' ? (
                 <Chip
                     label={`Sorting by ${value}`}
                     size="small"
