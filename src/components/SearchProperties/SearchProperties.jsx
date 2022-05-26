@@ -1,53 +1,20 @@
 import { Container, Divider, Grid } from '@mui/material';
 import React from 'react';
+import { usePropertiesList } from '../../dataHooks/usePropertiesList';
 import FilterSection from './FilterSection/FilterSection';
 import PropertyCard from './PropertyCard/PropertyCard';
 import SortControls from './SortControls/SortControls';
 
-const propertiesList = [
-  {
-    title: '3 Bhk Semi-furnished Flat',
-    address: 'Sector 46, Gurugram, Haryana',
-    monthlyRent: '30,000',
-    rating: '4.5',
-    furnishingType: 'semi-furnished',
-    bhkType: '3 bhk',
-  },
-  {
-    title: '1 Bhk Fully-furnished Flat',
-    address: 'Sector 46, Gurugram, Haryana',
-    monthlyRent: '15,000',
-    rating: '3.5',
-    furnishingType: 'fully-furnished',
-    bhkType: '1 bhk',
-  },
-  {
-    title: '1 Bhk Fully-furnished Flat',
-    address: 'Sector 46, Gurugram, Haryana',
-    monthlyRent: '15,000',
-    rating: '3.5',
-    furnishingType: 'fully-furnished',
-    bhkType: '1 bhk',
-  },
-  {
-    title: '1 Bhk Fully-furnished Flat',
-    address: 'Sector 46, Gurugram, Haryana',
-    monthlyRent: '15,000',
-    rating: '3.5',
-    furnishingType: 'fully-furnished',
-    bhkType: '1 bhk',
-  }
-]
-
 function SearchProperties() {
+  const [properties, updateFilters] = usePropertiesList();
   return (
     <React.Fragment>
-      <FilterSection />
+      <FilterSection  updateFilters={updateFilters}/>
       <Divider />
       <SortControls />
       <Container maxWidth={false}>
         <Grid container spacing={4}>
-          {propertiesList.map((property) => (
+          {properties.map((property) => (
             <Grid item xs={12} md={4} lg={3}>
               <PropertyCard propertyDetails={property}/>
             </Grid>

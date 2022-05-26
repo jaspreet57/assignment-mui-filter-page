@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,8 +9,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import RecordIcon from '@mui/icons-material/FiberManualRecord';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-import { useState } from 'react';
 
 const ITEM_HEIGHT = 60;
 const ITEM_PADDING_TOP = 8;
@@ -26,20 +25,32 @@ const MenuProps = {
 const options = [
     {
         title: 'Semi-furnished',
+        value: 'semi-furnished',
         subtitle: 'like you will get light, fan, gyeser along with all wooden work done inside the house'
     },
     {
         title: 'Fully furnished',
+        value: 'fully-furnished',
         subtitle: 'like you will get light, fan, gyeser along with all wooden work done inside the house',
     },
     {
         title: 'Un-furnished',
+        value: 'un-furnished',
         subtitle: 'like you will get light, fan, gyeser along with all wooden work done inside the house',
     }
 ];
 
-const FurnishingType = () => {
+const FurnishingType = ({ updateFilter }) => {
     const [value, setValue] = useState(['empty']);
+
+    useEffect(() => {
+        const newValue = value.filter(item => item !== 'empty');
+        if (newValue.length) {
+            updateFilter('furnishingType', newValue);
+        } else {
+            updateFilter('furnishingType', null);
+        }
+    }, [value, updateFilter]);
 
     const handleChange = (event) => {
         const {
@@ -69,8 +80,8 @@ const FurnishingType = () => {
                 MenuProps={MenuProps}
             >
                 {options.map((option) => (
-                    <MenuItem key={option.title} value={option.title}>
-                        <Checkbox checked={value.indexOf(option.title) > -1} />
+                    <MenuItem key={option.title} value={option.value}>
+                        <Checkbox checked={value.indexOf(option.value) > -1} />
                         <ListItemText primary={option.title} secondary={option.subtitle} sx={{ '& p': { wordBreak: 'break-word', whiteSpace: 'normal' }}} />
                     </MenuItem>
                 ))}

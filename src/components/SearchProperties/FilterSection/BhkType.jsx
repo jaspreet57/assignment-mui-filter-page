@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,8 +9,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import RecordIcon from '@mui/icons-material/FiberManualRecord';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-import { useState } from 'react';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -31,8 +30,17 @@ const options = [
     'RK',
 ];
 
-const BhkType = () => {
+const BhkType = ({ updateFilter }) => {
     const [value, setValue] = useState(['empty']);
+
+    useEffect(() => {
+        const newValue = value.filter(item => item !== 'empty');
+        if (newValue.length) {
+            updateFilter('bhkType', newValue);
+        } else {
+            updateFilter('bhkType', null);
+        }
+    }, [value, updateFilter]);
 
     const handleChange = (event) => {
         const {

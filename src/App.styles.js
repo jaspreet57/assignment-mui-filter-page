@@ -4,4 +4,5 @@ export const AppRoot = styled.div`
   /* width: 100vw;
   height: 100vh; */
   background-color: #fff;
+  padding-bottom: 100px;
 `

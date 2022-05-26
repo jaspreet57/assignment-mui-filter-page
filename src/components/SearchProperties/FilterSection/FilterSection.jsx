@@ -2,11 +2,12 @@ import BhkType from './BhkType';
 import FurnishingType from './FurnishingType';
 import { FilterContainer } from './FilterSection.styles';
 
-function FilterSection() {
+const FilterSection = ({ updateFilters }) => {
+
     return (
         <FilterContainer maxWidth={false}>
-                <BhkType />
-                <FurnishingType />
+                <BhkType updateFilter={updateFilters} />
+                <FurnishingType updateFilter={updateFilters} />
         </FilterContainer>
     );
 }
