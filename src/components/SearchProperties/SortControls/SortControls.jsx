@@ -1,10 +1,10 @@
 import SortBy from './SortBy';
 import { SortContainer } from './SortControls.styles'
 
-function SortControls() {
+function SortControls({ updateSort }) {
     return (
         <SortContainer maxWidth={false}>
-            <SortBy />
+            <SortBy updateSort={updateSort} />
         </SortContainer>
     );
 }

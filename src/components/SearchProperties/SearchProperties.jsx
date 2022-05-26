@@ -6,12 +6,12 @@ import PropertyCard from './PropertyCard/PropertyCard';
 import SortControls from './SortControls/SortControls';
 
 function SearchProperties() {
-  const [properties, updateFilters] = usePropertiesList();
+  const [properties, updateFilters, updateSort] = usePropertiesList();
   return (
     <React.Fragment>
       <FilterSection  updateFilters={updateFilters}/>
       <Divider />
-      <SortControls />
+      <SortControls updateSort={updateSort} />
       <Container maxWidth={false}>
         <Grid container spacing={4}>
           {properties.map((property) => (

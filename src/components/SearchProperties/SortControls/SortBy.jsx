@@ -29,20 +29,20 @@ const options = [
     'Relevance',
 ];
 
-const SortBy = () => {
-    const [value, setValue] = useState('none');
+const SortBy = ({ updateSort }) => {
+    const [sortValue, setValue] = useState('none');
 
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
-        setValue(
-            value
-        );
+        setValue(value);
+        updateSort(value);
     };
 
     const handleDelete = () => {
         setValue('none');
+        updateSort();
     };
 
     return (
@@ -51,7 +51,7 @@ const SortBy = () => {
                 <Select
                     disableUnderline
                     IconComponent={KeyboardArrowDownIcon}
-                    value={value}
+                    value={sortValue}
                     onChange={handleChange}
                     input={<Input />}
                     renderValue={(selected) => (
@@ -68,9 +68,9 @@ const SortBy = () => {
                     ))}
                 </Select>
             </FormControl>
-            {value !== 'none' ? (
+            {sortValue !== 'none' ? (
                 <Chip
-                    label={`Sorting by ${value}`}
+                    label={`Sorting by ${sortValue}`}
                     size="small"
                     onDelete={handleDelete}
                 />
