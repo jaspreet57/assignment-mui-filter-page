@@ -60,11 +60,14 @@ function AppNavBar() {
         </Box>
         <Search>
           <SearchIconWrapper>
-            <SearchIcon />
+            <IconButton aria-label="search" sx={{ background: "#4F46E5", '&:hover': { background: "#4f46e5de" } }} >
+              <SearchIcon sx={{ color: 'white', fontSize: '15px' }} />
+            </IconButton>
           </SearchIconWrapper>
           <StyledInputBase
             placeholder="Search…"
             inputProps={{ 'aria-label': 'search' }}
+
           />
         </Search>
         <Box sx={{ flexGrow: 1 }} />
@@ -75,27 +78,27 @@ function AppNavBar() {
           <TextField id="outlined-basic" label="List Your Place" variant="outlined" size="small" />
         </Box>
         <Box sx={{ display: { xs: 'flex' } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              // aria-controls={menuId}
-              // aria-haspopup="true"
-              // onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
+          <IconButton
+            size="large"
+            aria-label="show 17 new notifications"
+            color="inherit"
+          >
+            <Badge badgeContent={17} color="error">
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
+          <IconButton
+            size="large"
+            edge="end"
+            aria-label="account of current user"
+            // aria-controls={menuId}
+            // aria-haspopup="true"
+            // onClick={handleProfileMenuOpen}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+        </Box>
       </Toolbar>
     </AppBar>
   );
