@@ -1,4 +1,4 @@
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/OutlinedInput';
 
 export const Search = styled('div')(() => ({
